@@ -17,7 +17,7 @@ public class StringParser {
                 throw new IllegalArgumentException();
             }
             int countIndex = open - 1;
-            while (Character.isDigit(countIndex - 1)) {
+            while (countIndex>0&&Character.isDigit(res.charAt(countIndex - 1))) {
                 countIndex--;
             }
             int count = Integer.parseInt(res.substring(countIndex, open));
